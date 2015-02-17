@@ -1,0 +1,5 @@
+.tableView .custom-cell {
+	-fx-alignment: CENTER;
+}
+
+.none-visible         { -fx-background-color: azure;        }

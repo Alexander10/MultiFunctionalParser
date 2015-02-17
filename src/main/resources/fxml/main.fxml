@@ -1,0 +1,35 @@
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" minHeight="-Infinity" xmlns:fx="http://javafx.com/fxml"
+			prefHeight="850"  fx:controller="sk.ban.controller.MainController">
+	<children>
+		<MenuBar prefHeight="24.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+			<menus>
+				<Menu mnemonicParsing="false" text="File">
+					<items>
+						<MenuItem mnemonicParsing="false" onAction="#openDirectory"
+								  text="Open Directory"/>
+						<MenuItem mnemonicParsing="false" onAction="#openFile"
+								  text="Open File"/>
+						<SeparatorMenuItem/>
+						<MenuItem mnemonicParsing="false" onAction="#exportConfiguration" text="Export Configuration"/>
+						<MenuItem mnemonicParsing="false" onAction="#importConfiguration" text="Import Configuration"/>
+						<SeparatorMenuItem/>
+						<MenuItem mnemonicParsing="false" onAction="#close" text="Close application"/>
+
+					</items>
+				</Menu>
+
+			</menus>
+		</MenuBar>
+		<BorderPane AnchorPane.topAnchor="24.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+					AnchorPane.rightAnchor="0.0">
+			<center>
+				<fx:include source="parser.fxml"/>
+			</center>
+			<bottom>
+				<fx:include source="console.fxml"/>
+			</bottom>
+		</BorderPane>
+	</children>
+</AnchorPane>

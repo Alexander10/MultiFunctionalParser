@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8"
+			fx:controller="sk.ban.controller.ParserController">
+	<children>
+		<GridPane hgap="10.0" layoutX="15.0" layoutY="13.0" prefWidth="1260" vgap="10.0" prefHeight="500">
+			<children>
+
+				<HBox GridPane.columnIndex="0" GridPane.rowIndex="0" spacing="10" >
+					<TextField fx:id="tfPath" prefWidth="350" promptText="File path" />
+					<Button fx:id="btnStart" prefWidth="100" text="Start Parsing" onAction="#parseData"/>
+					<Button fx:id="btnSave"  prefWidth="100" text="Save" onAction="#saveData"/>
+					<Button fx:id="btnValidate"  prefWidth="100" text="Validate" onAction="#validateData"/>
+				</HBox>
+				<HBox GridPane.columnIndex="1" GridPane.rowIndex="0" spacing="10">
+					<TextField fx:id="tfConferenceName" prefWidth="250" promptText="Conference name" />
+					<TextField fx:id="tfYear" prefWidth="150" promptText="Year"/>
+				</HBox>
+				<TableView fx:id="tableView" prefHeight="550" styleClass="tableView" GridPane.columnIndex="0" prefWidth="880"
+						   GridPane.rowIndex="1" GridPane.rowSpan="2">
+
+				</TableView>
+
+				<HBox GridPane.columnIndex="1" GridPane.rowIndex="1" spacing="10">
+					<DatePicker fx:id="tfRegistrationDate" prefWidth="150" promptText="Registration date" />
+					<DatePicker fx:id="tfPublishedDate" prefWidth="150" promptText="Published date"/>
+				</HBox>
+				<TextArea fx:id="taOutput" GridPane.rowIndex="2"  GridPane.columnIndex="1"
+						   editable="false"></TextArea>
+			</children>
+			<columnConstraints>
+				<ColumnConstraints/>
+				<ColumnConstraints/>
+			</columnConstraints>
+			<rowConstraints>
+				<RowConstraints/>
+				<RowConstraints/>
+				<RowConstraints/>
+			</rowConstraints>
+		</GridPane>
+	</children>
+</AnchorPane>

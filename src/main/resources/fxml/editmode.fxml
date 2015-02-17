@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<fx:root id="AnchorPane" maxHeight="-Infinity" minHeight="-Infinity" type="javafx.scene.layout.AnchorPane"
+		 xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+	<children>
+		<GridPane fx:id="gridPane" hgap="10.0" layoutX="15.0" layoutY="13.0" prefHeight="Infinity" prefWidth="1200"
+				  vgap="10.0"  AnchorPane.leftAnchor="10.0"
+				  AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+			<columnConstraints>
+				<ColumnConstraints/>
+				<ColumnConstraints/>
+				<ColumnConstraints/>
+			</columnConstraints>
+			<rowConstraints>
+				<RowConstraints/>
+			</rowConstraints>
+			<children>
+				<HBox prefWidth="500" spacing="10" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="2">
+					<children>
+
+						<Button fx:id="btnSave" prefWidth="100" text="Save Changes" onAction="#saveChanges"/>
+						<Button fx:id="btnDiscardChanges" prefWidth="105" text="Discard Changes" onAction="#discardChanges"/>
+						<Button fx:id="btnAddKeyword" prefWidth="100" text="Add Keyword" onAction="#addKeyword"/>
+						<Button fx:id="btnAddAuthor" prefWidth="100" text="Add Author" onAction="#addAuthor"/>
+					</children>
+				</HBox>
+				<HBox prefWidth="800" spacing="10" GridPane.columnIndex="2" GridPane.rowIndex="0">
+					<children>
+						<Button fx:id="btnAddReference" alignment="TOP_RIGHT" contentDisplay="RIGHT" prefWidth="100"
+								text="Add Reference" onAction="#addReference"/>
+					</children>
+				</HBox>
+
+			</children>
+
+			<!-- Load content dynamically from controller -->
+
+		</GridPane>
+	</children>
+</fx:root>
