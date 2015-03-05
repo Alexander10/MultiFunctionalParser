@@ -17,7 +17,7 @@ import javax.enterprise.event.Observes;
 import javax.inject.Inject;
 
 /**
- * Created by USER on 17. 1. 2015.
+ * Created by BAN on 17. 1. 2015.
  */
 public class ApplicationStarter {
 

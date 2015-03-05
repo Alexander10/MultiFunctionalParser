@@ -3,7 +3,7 @@ package sk.ban.data;
 import java.io.Serializable;
 
 /**
- * Created by USER on 26. 1. 2015.
+ * Created by BAN on 26. 1. 2015.
  */
 public class DocumentNavigation implements Serializable {
 
@@ -13,14 +13,14 @@ public class DocumentNavigation implements Serializable {
 	@PropertyInfo(label = "Section Name")
 	private String section = "";
 
-	private String cntOfPages = "";
+	private final String cntOfPages = "";
 
 	@PropertyInfo(label = "Start Page Number")
 	private String startPage = "";
 
 	private String sectionNumber = "";
 
-	public DocumentNavigation(){
+	public DocumentNavigation() {
 
 	}
 

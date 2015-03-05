@@ -1,12 +1,12 @@
 package sk.ban.parser.pdf;
 
-import sk.ban.exception.ParserException;
-import sk.ban.data.Document;
-import sk.ban.data.DocumentContent;
-import sk.ban.data.DocumentNavigation;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import sk.ban.data.Document;
+import sk.ban.data.DocumentContent;
+import sk.ban.data.DocumentNavigation;
+import sk.ban.exception.ParserException;
 import sk.ban.parser.Parserable;
 import sk.ban.util.Constants;
 import sk.ban.util.StringUtil;
@@ -22,7 +22,7 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 /**
- * Created by USER on 30. 1. 2015.
+ * Created by BAN on 30. 1. 2015.
  */
 public class MyPDFParser implements Parserable {
 
@@ -32,7 +32,6 @@ public class MyPDFParser implements Parserable {
 	private static final double TITLE_FONT_MIN_SIZE = 16;
 	private static final int INFINITY_LINE = Integer.MAX_VALUE;
 
-
 	public Document parse(File file) {
 
 		PDFDocument doc = parsePDFToLines(file);
@@ -41,7 +40,7 @@ public class MyPDFParser implements Parserable {
 		DocumentContent contentDTO = new DocumentContent();
 		contentDTO.setFileName(file.toString());
 		//entry point to alg. is find first the index of abstract
-		int abstractIndex = findTextIndex(lines, (line) -> isAbstract(line));
+		int abstractIndex = findTextIndex(lines, this::isAbstract);
 		abstractIndex = abstractIndex != 0 ? abstractIndex : 10;        //for case when abstract will be not found
 
 		//parse title
@@ -54,21 +53,21 @@ public class MyPDFParser implements Parserable {
 		contentDTO.setSubtitle(subTitle.getText());
 
 		//parse authors => +1 find after subtitle index
-		ReturnValue authors = getRawText(lines, subTitle.getLastIndex()==0? title.getLastIndex() + 1 : subTitle.getLastIndex()+1,
+		ReturnValue authors = getRawText(lines, subTitle.getLastIndex() == 0 ? title.getLastIndex() + 1 : subTitle.getLastIndex() + 1,
 				abstractIndex, (line, prev) -> line.hasTheSameFormat(prev) && line.avgFontSize() < TITLE_FONT_MIN_SIZE);
-		contentDTO.setAuthors(Arrays.asList(StringUtil.parseDataByDelimiter(authors.getText())));
+		contentDTO.setAuthors(Arrays.asList(StringUtil.splitData(authors.getText())));
 
 		//parse abstract => 50 is predicate max length of Abstract text
 		ReturnValue abstractVal = getRawText(lines, abstractIndex, abstractIndex + 50,
 				(line, prev) -> line.hasTheSameFormat(prev) && !line.getText().contains("Keywords"));
-		contentDTO.setAbstractText(StringUtil.removeNoneAlphabeticCharcters(
-				StringUtil.removeFirstUselessWord(Constants.ABSTRACT, abstractVal.getText())));
+		contentDTO.setAbstractText(StringUtil.removeStartNoneAlphanumericString(
+				abstractVal.getText().replace(Constants.ABSTRACT, "")));
 
 		//parse keywords => +1 means next line after Abstract should be keywords and max predicated length is 4 lines
 		ReturnValue keywords = getRawText(lines, abstractVal.getLastIndex() + 1, abstractVal.getLastIndex() + 4,
 				(line, prev) -> line.hasTheSameFormat(prev) && line.getText().contains("Keywords"));
-		contentDTO.setKeywords(Arrays.asList(StringUtil.parseDataByDelimiter(
-				StringUtil.removeNoneAlphabeticCharcters(
+		contentDTO.setKeywords(Arrays.asList(StringUtil.splitData(
+				StringUtil.removeStartNoneAlphanumericString(
 						StringUtil.removeFirstUselessWord(Constants.KEYWORDS, keywords.getText())))));
 
 		//first find REFERENCES text and then go until the SECTION text (probably this is not good approach ???)
@@ -87,6 +86,9 @@ public class MyPDFParser implements Parserable {
 
 
 	/**
+	 * Method parse from pdf file only information about pages and SECTION title
+	 * data are parsed from page footer (under 750.0)
+	 *
 	 * @param lines
 	 * @return
 	 */
@@ -100,7 +102,7 @@ public class MyPDFParser implements Parserable {
 				//find line with SECTION string
 				if (isSectionTitleText(dto, line.getText())) {
 					//after SECTION find two next lines, on these lines should be placed section title
-					dto.setSection(getRawText(lines, ++index, index + 2, (l, prev) -> l.hasTheSameFormat(prev)).getText());
+					dto.setSection(getRawText(lines, ++index, index + 2, PDFLine::hasTheSameFormat).getText());
 				} else if (StringUtil.containsBoundedDigit(line.getText())) {
 
 					if (dto.getStartPage().isEmpty()) {
@@ -116,11 +118,27 @@ public class MyPDFParser implements Parserable {
 		return dto;
 	}
 
-
+	/**
+	 * Checks if line contains SECTION text
+	 *
+	 * @param dto
+	 * @param text
+	 * @return
+	 */
 	private boolean isSectionTitleText(DocumentNavigation dto, String text) {
 		return dto.getSection().isEmpty() && text.trim().equalsIgnoreCase("SECTION");
 	}
 
+	/**
+	 * The most important method for retrieving data. Data are retrieved from start (line index number) to end (line index number)
+	 * By predicate we select only lines which match to our condition
+	 *
+	 * @param lines
+	 * @param start
+	 * @param end
+	 * @param predicate
+	 * @return
+	 */
 	private ReturnValue getRawText(List<PDFLine> lines, int start, int end, BiPredicate<PDFLine, Optional<PDFLine>> predicate) {
 
 		int index = 0;
@@ -157,11 +175,9 @@ public class MyPDFParser implements Parserable {
 
 			stripper.getText(doc);
 			document = stripper.getPDFDocument();
-			List<PDFLine> lines = document.getLines();
-			//lines.stream().map((line) -> line.getText() + " " + line.getYPosition()).forEach(System.out::println);
 			doc.close();
 		} catch (IOException e) {
-			throw new ParserException("Problem with parsing pdf file: " + e);
+			throw new ParserException("Problem with parsing pdf file: ", e);
 		}
 		return document;
 
@@ -170,7 +186,7 @@ public class MyPDFParser implements Parserable {
 
 	/**
 	 * @param lines
-	 * @return
+	 * @return index of founded line which match to predicate condition
 	 */
 	private int findTextIndex(List<PDFLine> lines, Predicate<PDFLine> predicate) {
 		for (int idx = 0; idx < lines.size(); idx++) {
@@ -183,7 +199,7 @@ public class MyPDFParser implements Parserable {
 
 
 	/**
-	 * find out if line contains at first position Abstract
+	 * Find out if line contains at first position of text Abstract text
 	 *
 	 * @param line
 	 * @return
@@ -195,16 +211,13 @@ public class MyPDFParser implements Parserable {
 		}
 
 		String abstractText = text.substring(0, Constants.ABSTRACT.length());
-		if (abstractText.equalsIgnoreCase(Constants.ABSTRACT.toString())) {
-			return true;
-		}
-		return false;
+		return abstractText.equalsIgnoreCase(Constants.ABSTRACT.toString());
 	}
 
 
 	private class ReturnValue {
-		private String text;
-		private int lastIndex;
+		private final String text;
+		private final int lastIndex;
 
 		public ReturnValue(String text, int lastIndex) {
 			this.text = text;

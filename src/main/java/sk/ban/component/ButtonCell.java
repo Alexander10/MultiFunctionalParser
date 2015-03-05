@@ -18,13 +18,14 @@ import sk.ban.worker.BibExporter;
 import java.io.IOException;
 
 /**
- * Created by USER on 16. 2. 2015.
+ * Created by BAN on 16. 2. 2015.
  */
 public class ButtonCell<T> extends TableCell<T, DocumentDataModel> {
 
 	private Button cellButton;
 	private SimpleObjectProperty content = new SimpleObjectProperty();
 
+	@SuppressWarnings("unchecked")
 	public ButtonCell(String name, ButtonAction action, TextArea taOutput) {
 		cellButton = new Button(name);
 		getStyleClass().add("custom-cell");
@@ -33,7 +34,7 @@ public class ButtonCell<T> extends TableCell<T, DocumentDataModel> {
 	}
 
 	/**
-	 * Method handle button actions in table
+	 * Method handle button action in table
 	 * @param action
 	 */
 	private void addButtonActionListener(ButtonAction action, TextArea taOutput){
@@ -43,7 +44,7 @@ public class ButtonCell<T> extends TableCell<T, DocumentDataModel> {
 				FileUtil.openFile(model.getReferenceDTO().getContentData().getFileName());
 
 			} else if (action == ButtonAction.SHOW_STRING) {
-				taOutput.appendText(BibExporter.exportDataToString(model.getReferenceDTO()));
+				taOutput.appendText(BibExporter.exportToString(model.getReferenceDTO()));
 				taOutput.appendText("\n\n");
 			} else {
 				openEditMode((DocumentDataModel) content.getValue());

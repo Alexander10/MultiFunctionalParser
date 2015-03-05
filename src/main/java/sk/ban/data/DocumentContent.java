@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by USER on 26. 1. 2015.
+ * Created by BAN on 26. 1. 2015.
  */
 public class DocumentContent implements Serializable {
 

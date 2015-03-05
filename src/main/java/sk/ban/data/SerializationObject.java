@@ -5,16 +5,16 @@ import java.time.LocalDate;
 import java.util.List;
 
 /**
- * Created by USER on 17. 2. 2015.
+ * Created by BAN on 17. 2. 2015.
  */
 public class SerializationObject implements Serializable {
 
-	private List<TableRow> rows;
-	private String path;
-	private String conferenceName;
-	private String conferenceYear;
-	private LocalDate registrationDate;
-	private LocalDate publishedDate;
+	private final List<TableRow> rows;
+	private final String path;
+	private final String conferenceName;
+	private final String conferenceYear;
+	private final LocalDate registrationDate;
+	private final LocalDate publishedDate;
 
 	public SerializationObject(List<TableRow> rows, String path, String conferenceName, String conferenceYear, LocalDate registrationDate, LocalDate publishedDate) {
 		this.rows = rows;

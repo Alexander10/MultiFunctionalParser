@@ -1,8 +1,8 @@
 package sk.ban.worker;
 
-import sk.ban.enums.PropertyType;
-import sk.ban.data.PropertyInfo;
 import org.slf4j.LoggerFactory;
+import sk.ban.data.PropertyInfo;
+import sk.ban.enums.PropertyType;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
@@ -10,7 +10,7 @@ import java.lang.reflect.Method;
 import java.util.List;
 
 /**
- * Created by USER on 9. 2. 2015.
+ * Created by BAN on 9. 2. 2015.
  */
 public class DataValidator {
 
@@ -27,7 +27,8 @@ public class DataValidator {
 	}
 
 	/**
-	 * Using reflection validate object properties
+	 * using reflection to validate object properties which are annotated with {#link PropertyInfo}
+	 * Validated are types (list and string)
 	 *
 	 * @param o
 	 * @return
@@ -37,7 +38,7 @@ public class DataValidator {
 		StringBuilder builder = new StringBuilder("File: " + fileName + "\n");
 
 		if (o == null) {
-			return builder.toString() + " no data \n";
+			return builder.append(" no data \n").toString();
 		}
 
 		Field[] allFields = o.getClass().getDeclaredFields();
@@ -53,22 +54,19 @@ public class DataValidator {
 					case STRING:
 						String strValue = (String) value;
 						if (strValue.isEmpty()) {
-							builder.append("\t" + text + " : " + "value is missing!!! \n");
+							builder.append("\t").append(text).append(" : ").append("value is missing!!! \n");
 							valid = false;
 						}
 						break;
 					case LIST:
 						List list = (List) value;
 						if (list.isEmpty() || list.size() == 0) {
-							builder.append("\t" + text + " : " + "value is missing!!! \n");
+							builder.append("\t").append(text).append(" : ").append("value is missing!!! \n");
 							valid = false;
 						}
 						break;
-
 				}
 			}
-
-
 		}
 		if (valid) {
 			return "";

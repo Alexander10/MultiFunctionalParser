@@ -10334,3 +10334,329 @@ sk.ban.exception.ParserException: Problem with opening edit mode window: javafx.
 2015-02-17 19:45:05,586 INFO  [Thread-7] ParserService Data was successfully parsed
 2015-02-17 19:46:55,589 INFO  [JavaFX Application Thread] MainController Close application
 2015-02-17 19:47:36,287 INFO  [JavaFX Application Thread] MainController Close application
+2015-02-18 19:59:57,109 INFO  [Thread-7] ParserService Start parsing
+2015-02-18 20:00:00,697 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-1.pdf
+2015-02-18 20:00:01,176 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-10.pdf
+2015-02-18 20:00:01,473 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-100.pdf
+2015-02-18 20:00:01,673 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-101.pdf
+2015-02-18 20:00:01,896 INFO  [pool-3-thread-2] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-102.pdf
+2015-02-18 20:00:02,082 INFO  [pool-3-thread-2] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-103.pdf
+2015-02-18 20:00:02,260 INFO  [pool-3-thread-2] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-104.pdf
+2015-02-18 20:00:02,445 INFO  [pool-3-thread-2] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-105.pdf
+2015-02-18 20:00:02,659 INFO  [pool-3-thread-2] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-106.pdf
+2015-02-18 20:00:02,857 INFO  [pool-3-thread-2] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-107.pdf
+2015-02-18 20:00:02,989 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-108.pdf
+2015-02-18 20:00:03,322 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-109.pdf
+2015-02-18 20:00:03,486 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-11.pdf
+2015-02-18 20:00:03,626 INFO  [pool-3-thread-2] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-110.pdf
+2015-02-18 20:00:03,694 INFO  [pool-3-thread-2] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-12.pdf
+2015-02-18 20:00:03,803 INFO  [pool-3-thread-2] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-13.pdf
+2015-02-18 20:00:03,936 INFO  [pool-3-thread-2] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-14.pdf
+2015-02-18 20:00:04,103 INFO  [pool-3-thread-2] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-15.pdf
+2015-02-18 20:00:04,255 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-16.pdf
+2015-02-18 20:00:04,457 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-17.pdf
+2015-02-18 20:00:04,606 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-18.pdf
+2015-02-18 20:00:04,777 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-19.pdf
+2015-02-18 20:00:04,900 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-2.pdf
+2015-02-18 20:00:05,039 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-20.pdf
+2015-02-18 20:00:05,177 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-21.pdf
+2015-02-18 20:00:05,396 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-22.pdf
+2015-02-18 20:00:05,483 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-23.pdf
+2015-02-18 20:00:05,546 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-24.pdf
+2015-02-18 20:00:05,721 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-25.pdf
+2015-02-18 20:00:05,908 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-26.pdf
+2015-02-18 20:00:06,021 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-27.pdf
+2015-02-18 20:00:06,118 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-28.pdf
+2015-02-18 20:00:06,234 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-29.pdf
+2015-02-18 20:00:06,343 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-3.pdf
+2015-02-18 20:00:06,442 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-30.pdf
+2015-02-18 20:00:06,590 INFO  [pool-3-thread-2] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-31.pdf
+2015-02-18 20:00:06,683 INFO  [pool-3-thread-2] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-32.pdf
+2015-02-18 20:00:06,807 INFO  [pool-3-thread-2] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-33.pdf
+2015-02-18 20:00:06,910 INFO  [pool-3-thread-2] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-34.pdf
+2015-02-18 20:00:07,054 INFO  [pool-3-thread-2] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-35.pdf
+2015-02-18 20:00:07,122 INFO  [pool-3-thread-2] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-36.pdf
+2015-02-18 20:00:07,238 INFO  [pool-3-thread-2] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-37.pdf
+2015-02-18 20:00:07,321 INFO  [pool-3-thread-2] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-38.pdf
+2015-02-18 20:00:07,434 INFO  [pool-3-thread-2] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-39.pdf
+2015-02-18 20:00:07,540 INFO  [pool-3-thread-2] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-4.pdf
+2015-02-18 20:00:07,638 INFO  [pool-3-thread-2] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-40.pdf
+2015-02-18 20:00:07,725 INFO  [pool-3-thread-2] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-41.pdf
+2015-02-18 20:00:07,847 INFO  [pool-3-thread-2] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-42.pdf
+2015-02-18 20:00:08,024 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-43.pdf
+2015-02-18 20:00:08,213 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-44.pdf
+2015-02-18 20:00:08,402 INFO  [pool-3-thread-2] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-45.pdf
+2015-02-18 20:00:08,580 INFO  [pool-3-thread-2] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-46.pdf
+2015-02-18 20:00:08,745 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-47.pdf
+2015-02-18 20:00:08,984 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-48.pdf
+2015-02-18 20:00:09,092 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-49.pdf
+2015-02-18 20:00:09,282 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-5.pdf
+2015-02-18 20:00:09,633 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-50.pdf
+2015-02-18 20:00:09,846 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-51.pdf
+2015-02-18 20:00:10,023 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-52.pdf
+2015-02-18 20:00:10,159 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-53.pdf
+2015-02-18 20:00:10,371 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-54.pdf
+2015-02-18 20:00:10,448 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-55.pdf
+2015-02-18 20:00:10,542 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-56.pdf
+2015-02-18 20:00:10,669 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-57.pdf
+2015-02-18 20:00:10,766 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-58.pdf
+2015-02-18 20:00:10,848 INFO  [pool-3-thread-2] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-59.pdf
+2015-02-18 20:00:10,978 INFO  [pool-3-thread-2] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-6.pdf
+2015-02-18 20:00:11,085 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-60.pdf
+2015-02-18 20:00:11,229 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-61.pdf
+2015-02-18 20:00:11,364 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-62.pdf
+2015-02-18 20:00:11,490 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-63.pdf
+2015-02-18 20:00:11,619 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-64.pdf
+2015-02-18 20:00:12,131 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-65.pdf
+2015-02-18 20:00:12,305 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-66.pdf
+2015-02-18 20:00:12,426 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-67.pdf
+2015-02-18 20:00:12,968 INFO  [pool-3-thread-2] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-68.pdf
+2015-02-18 20:00:13,051 INFO  [pool-3-thread-2] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-69.pdf
+2015-02-18 20:00:13,110 INFO  [pool-3-thread-2] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-7.pdf
+2015-02-18 20:00:13,170 INFO  [pool-3-thread-2] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-70.pdf
+2015-02-18 20:00:13,287 INFO  [pool-3-thread-2] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-71.pdf
+2015-02-18 20:00:13,446 INFO  [pool-3-thread-2] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-72.pdf
+2015-02-18 20:00:13,556 INFO  [pool-3-thread-2] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-73.pdf
+2015-02-18 20:00:13,835 INFO  [pool-3-thread-2] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-74.pdf
+2015-02-18 20:00:13,906 INFO  [pool-3-thread-2] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-75.pdf
+2015-02-18 20:00:13,989 INFO  [pool-3-thread-2] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-76.pdf
+2015-02-18 20:00:14,119 INFO  [pool-3-thread-2] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-77.pdf
+2015-02-18 20:00:14,250 INFO  [pool-3-thread-2] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-78.pdf
+2015-02-18 20:00:14,347 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-79.pdf
+2015-02-18 20:00:14,480 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-8.pdf
+2015-02-18 20:00:14,563 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-80.pdf
+2015-02-18 20:00:14,654 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-81.pdf
+2015-02-18 20:00:14,809 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-82.pdf
+2015-02-18 20:00:14,911 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-83.pdf
+2015-02-18 20:00:14,971 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-84.pdf
+2015-02-18 20:00:15,062 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-85.pdf
+2015-02-18 20:00:15,114 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-86.pdf
+2015-02-18 20:00:15,186 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-87.pdf
+2015-02-18 20:00:15,276 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-88.pdf
+2015-02-18 20:00:15,386 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-89.pdf
+2015-02-18 20:00:15,476 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-9.pdf
+2015-02-18 20:00:15,639 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-90.pdf
+2015-02-18 20:00:15,742 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-91.pdf
+2015-02-18 20:00:15,916 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-92.pdf
+2015-02-18 20:00:15,998 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-93.pdf
+2015-02-18 20:00:16,112 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-94.pdf
+2015-02-18 20:00:16,169 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-95.pdf
+2015-02-18 20:00:16,282 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-96.pdf
+2015-02-18 20:00:16,393 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-97.pdf
+2015-02-18 20:00:16,476 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-98.pdf
+2015-02-18 20:00:16,545 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\quaesti-2-1-99.pdf
+2015-02-18 20:00:16,714 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2100.docx
+2015-02-18 20:00:16,769 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2102.docx
+2015-02-18 20:00:16,820 INFO  [pool-3-thread-2] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2103.docx
+2015-02-18 20:00:16,838 INFO  [pool-3-thread-2] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2104.docx
+2015-02-18 20:00:16,931 INFO  [pool-3-thread-2] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2105.docx
+2015-02-18 20:00:16,972 INFO  [pool-3-thread-2] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2106.docx
+2015-02-18 20:00:16,996 INFO  [pool-3-thread-2] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2107.docx
+2015-02-18 20:00:17,027 INFO  [pool-3-thread-2] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2108.docx
+2015-02-18 20:00:17,037 INFO  [pool-3-thread-2] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2109.docx
+2015-02-18 20:00:17,057 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2110.docx
+2015-02-18 20:00:17,075 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2111.docx
+2015-02-18 20:00:17,103 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2112.docx
+2015-02-18 20:00:17,135 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2113.docx
+2015-02-18 20:00:17,175 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2114.docx
+2015-02-18 20:00:17,213 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2115.docx
+2015-02-18 20:00:17,249 INFO  [pool-3-thread-2] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2116.docx
+2015-02-18 20:00:17,260 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2118.docx
+2015-02-18 20:00:17,279 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2119.docx
+2015-02-18 20:00:17,321 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2120.docx
+2015-02-18 20:00:17,348 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2121.docx
+2015-02-18 20:00:17,383 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2122.docx
+2015-02-18 20:00:17,430 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2123.docx
+2015-02-18 20:00:17,471 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2124.docx
+2015-02-18 20:00:17,501 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2125.docx
+2015-02-18 20:00:17,528 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2126.docx
+2015-02-18 20:00:17,551 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2127.docx
+2015-02-18 20:00:17,576 INFO  [pool-3-thread-2] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2128.docx
+2015-02-18 20:00:17,611 INFO  [pool-3-thread-2] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2129.docx
+2015-02-18 20:00:17,648 INFO  [pool-3-thread-2] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2130.docx
+2015-02-18 20:00:17,670 INFO  [pool-3-thread-2] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2131.docx
+2015-02-18 20:00:17,697 INFO  [pool-3-thread-2] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2132.docx
+2015-02-18 20:00:17,714 INFO  [pool-3-thread-2] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2133.docx
+2015-02-18 20:00:17,735 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2134.docx
+2015-02-18 20:00:17,766 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2135.docx
+2015-02-18 20:00:17,775 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2136.docx
+2015-02-18 20:00:17,821 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2137.docx
+2015-02-18 20:00:17,847 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2138.docx
+2015-02-18 20:00:17,870 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2140.docx
+2015-02-18 20:00:17,882 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2141.docx
+2015-02-18 20:00:17,916 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2142.docx
+2015-02-18 20:00:17,938 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2143.docx
+2015-02-18 20:00:17,967 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2144.docx
+2015-02-18 20:00:18,000 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2145.docx
+2015-02-18 20:00:18,034 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2146.docx
+2015-02-18 20:00:18,067 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2147.docx
+2015-02-18 20:00:18,094 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2148.docx
+2015-02-18 20:00:18,106 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2149.docx
+2015-02-18 20:00:18,136 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2151.docx
+2015-02-18 20:00:18,173 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2152.docx
+2015-02-18 20:00:18,190 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2153.docx
+2015-02-18 20:00:18,220 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2154.docx
+2015-02-18 20:00:18,242 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2155.docx
+2015-02-18 20:00:18,262 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2156.docx
+2015-02-18 20:00:18,283 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2157.docx
+2015-02-18 20:00:18,304 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2158.docx
+2015-02-18 20:00:18,319 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2159.docx
+2015-02-18 20:00:18,342 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2160.docx
+2015-02-18 20:00:18,390 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2161.docx
+2015-02-18 20:00:18,429 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2163.docx
+2015-02-18 20:00:18,451 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2164.docx
+2015-02-18 20:00:18,481 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2165.docx
+2015-02-18 20:00:18,508 INFO  [pool-3-thread-2] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2166.docx
+2015-02-18 20:00:18,530 INFO  [pool-3-thread-2] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2167.docx
+2015-02-18 20:00:18,551 INFO  [pool-3-thread-2] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2168.docx
+2015-02-18 20:00:18,594 INFO  [pool-3-thread-2] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2169.docx
+2015-02-18 20:00:18,632 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2170.docx
+2015-02-18 20:00:18,678 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2172.docx
+2015-02-18 20:00:18,717 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2173.docx
+2015-02-18 20:00:18,740 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2174.docx
+2015-02-18 20:00:18,760 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2175.docx
+2015-02-18 20:00:18,783 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2177.docx
+2015-02-18 20:00:18,800 INFO  [pool-3-thread-2] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2178.docx
+2015-02-18 20:00:18,822 INFO  [pool-3-thread-2] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2179.docx
+2015-02-18 20:00:18,834 INFO  [pool-3-thread-2] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2180.docx
+2015-02-18 20:00:18,853 INFO  [pool-3-thread-2] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2181.docx
+2015-02-18 20:00:18,880 INFO  [pool-3-thread-2] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2182.docx
+2015-02-18 20:00:18,897 INFO  [pool-3-thread-2] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\2183.docx
+2015-02-18 20:00:18,935 INFO  [pool-3-thread-2] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\255.docx
+2015-02-18 20:00:18,959 INFO  [pool-3-thread-2] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\256.docx
+2015-02-18 20:00:19,032 INFO  [pool-3-thread-2] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\259.docx
+2015-02-18 20:00:19,116 INFO  [pool-3-thread-2] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\260.docx
+2015-02-18 20:00:19,142 INFO  [pool-3-thread-2] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\262.docx
+2015-02-18 20:00:19,159 INFO  [pool-3-thread-2] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\263.docx
+2015-02-18 20:00:19,178 INFO  [pool-3-thread-2] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\264.docx
+2015-02-18 20:00:19,247 INFO  [pool-3-thread-2] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\265.docx
+2015-02-18 20:00:19,329 INFO  [pool-3-thread-2] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\266.docx
+2015-02-18 20:00:19,418 INFO  [pool-3-thread-2] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\267.docx
+2015-02-18 20:00:19,490 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\268.docx
+2015-02-18 20:00:19,518 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\269.docx
+2015-02-18 20:00:19,556 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\270.docx
+2015-02-18 20:00:19,583 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\271.docx
+2015-02-18 20:00:19,593 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\272.docx
+2015-02-18 20:00:19,657 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\274.docx
+2015-02-18 20:00:19,684 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\275.docx
+2015-02-18 20:00:19,723 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\276.docx
+2015-02-18 20:00:19,748 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\277.docx
+2015-02-18 20:00:19,772 INFO  [pool-3-thread-2] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\278.docx
+2015-02-18 20:00:19,807 INFO  [pool-3-thread-2] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\279.docx
+2015-02-18 20:00:19,861 INFO  [pool-3-thread-2] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\281.docx
+2015-02-18 20:00:19,970 INFO  [pool-3-thread-2] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\282.docx
+2015-02-18 20:00:20,068 INFO  [pool-3-thread-2] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\283.docx
+2015-02-18 20:00:20,093 INFO  [pool-3-thread-2] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\284.docx
+2015-02-18 20:00:20,115 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\285.docx
+2015-02-18 20:00:20,134 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\286.docx
+2015-02-18 20:00:20,145 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\288.docx
+2015-02-18 20:00:20,186 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\289.docx
+2015-02-18 20:00:20,243 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\291.docx
+2015-02-18 20:00:20,266 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\292.docx
+2015-02-18 20:00:20,297 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\293.docx
+2015-02-18 20:00:20,319 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\294.docx
+2015-02-18 20:00:20,348 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\295.docx
+2015-02-18 20:00:20,371 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\296.docx
+2015-02-18 20:00:20,388 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\297.docx
+2015-02-18 20:00:20,396 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\298.docx
+2015-02-18 20:00:20,427 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\299.docx
+2015-02-18 20:00:20,427 INFO  [Thread-7] ParserService Data was successfully parsed
+2015-02-18 20:00:27,058 INFO  [JavaFX Application Thread] ParserController Validation was successfully ended
+2015-02-18 20:02:16,879 INFO  [JavaFX Application Thread] MainController Close application
+2015-02-25 18:26:43,825 INFO  [Thread-7] ParserService Start parsing
+2015-02-25 18:26:45,978 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\temp\quaesti-2-1-13.pdf
+2015-02-25 18:26:46,041 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\temp\266.docx
+2015-02-25 18:26:46,041 INFO  [Thread-7] ParserService Data was successfully parsed
+2015-02-25 18:27:44,791 INFO  [JavaFX Application Thread] BibExporter Data was successfully saved in bib file. c:\Temp\tests\temp\2014-Conference-1-1.bib
+2015-02-25 18:30:05,459 INFO  [JavaFX Application Thread] MainController Close application
+2015-02-25 18:38:03,107 INFO  [JavaFX Application Thread] MainController Close application
+2015-02-25 18:39:28,413 INFO  [Thread-7] ParserService Start parsing
+2015-02-25 18:39:29,911 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\temp\quaesti-2-1-13.pdf
+2015-02-25 18:39:29,972 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\temp\266.docx
+2015-02-25 18:39:29,972 INFO  [Thread-7] ParserService Data was successfully parsed
+2015-02-25 18:39:49,484 INFO  [JavaFX Application Thread] DataValidator Data are not valid
+2015-02-25 18:40:14,633 INFO  [JavaFX Application Thread] DataValidator Data are not valid
+2015-02-25 18:40:15,702 INFO  [JavaFX Application Thread] DataValidator Data are not valid
+2015-02-25 23:33:47,072 INFO  [JavaFX Application Thread] MainController Close application
+2015-02-26 18:48:32,278 INFO  [Thread-7] ParserService Start parsing
+2015-02-26 18:48:34,436 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\temp\quaesti-2-1-13.pdf
+2015-02-26 18:48:34,534 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\temp\266.docx
+2015-02-26 18:48:34,534 INFO  [Thread-7] ParserService Data was successfully parsed
+2015-02-26 18:48:50,583 INFO  [JavaFX Application Thread] DataValidator Data are not valid
+2015-02-26 18:48:53,713 INFO  [JavaFX Application Thread] DataValidator Data are not valid
+2015-02-26 18:49:43,893 INFO  [JavaFX Application Thread] DataValidator Data are not valid
+2015-02-26 18:50:49,238 ERROR [JavaFX Application Thread] RuntimeExceptionHandler Unhandled RuntimeError
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1768)
+	at javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1651)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:238)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
+	at javafx.event.Event.fireEvent(Event.java:204)
+	at javafx.scene.Node.fireEvent(Node.java:8175)
+	at javafx.scene.control.Button.fire(Button.java:185)
+	at com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:182)
+	at com.sun.javafx.scene.control.skin.BehaviorSkinBase$1.handle(BehaviorSkinBase.java:96)
+	at com.sun.javafx.scene.control.skin.BehaviorSkinBase$1.handle(BehaviorSkinBase.java:89)
+	at com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:218)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:238)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.event.Event.fireEvent(Event.java:204)
+	at javafx.scene.Scene$MouseHandler.process(Scene.java:3746)
+	at javafx.scene.Scene$MouseHandler.access$1800(Scene.java:3471)
+	at javafx.scene.Scene.impl_processMouseEvent(Scene.java:1695)
+	at javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2486)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:314)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:243)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:345)
+	at com.sun.glass.ui.View.handleMouseEvent(View.java:526)
+	at com.sun.glass.ui.View.notifyMouse(View.java:898)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.access$300(WinApplication.java:39)
+	at com.sun.glass.ui.win.WinApplication$4$1.run(WinApplication.java:112)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at sun.reflect.misc.Trampoline.invoke(MethodUtil.java:71)
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at sun.reflect.misc.MethodUtil.invoke(MethodUtil.java:275)
+	at javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1765)
+	... 47 more
+Caused by: java.lang.StringIndexOutOfBoundsException: String index out of range: -1
+	at java.lang.String.substring(String.java:1954)
+	at sk.ban.worker.BibExporter.exportToString(BibExporter.java:80)
+	at sk.ban.worker.BibExporter.exportToFile(BibExporter.java:53)
+	at sk.ban.controller.ParserController.saveData(ParserController.java:196)
+	... 57 more
+2015-02-26 18:53:08,961 INFO  [Thread-7] ParserService Start parsing
+2015-02-26 18:53:10,621 INFO  [pool-3-thread-1] MyPDFParser PDF file was successfully parsed: c:\Temp\tests\temp\quaesti-2-1-13.pdf
+2015-02-26 18:53:10,682 INFO  [pool-3-thread-1] DOCXParser DOCX file was successfully parsed: c:\Temp\tests\temp\266.docx
+2015-02-26 18:53:10,682 INFO  [Thread-7] ParserService Data was successfully parsed
+2015-02-26 18:54:00,188 INFO  [JavaFX Application Thread] DataValidator Data are not valid
+2015-02-26 18:54:34,240 INFO  [JavaFX Application Thread] BibExporter Data was successfully saved in bib file. c:\Temp\tests\temp\2013-Conference-1-1.bib
+2015-02-26 18:56:46,242 INFO  [JavaFX Application Thread] MainController Close application

@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Created by USER on 26. 1. 2015.
+ * Created by BAN on 26. 1. 2015.
  */
 public class ParserException extends RuntimeException {
 
@@ -18,5 +18,10 @@ public class ParserException extends RuntimeException {
 	public ParserException(Exception e){
 		super(e);
 		log.error(e.toString());
+	}
+
+	public ParserException(String message, Exception e){
+		super(message,e);
+		log.error(message + e.toString());
 	}
 }

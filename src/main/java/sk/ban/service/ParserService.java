@@ -2,25 +2,23 @@ package sk.ban.service;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import sk.ban.data.Document;
 import sk.ban.enums.FileExtension;
 import sk.ban.exception.ParserException;
-import sk.ban.data.Document;
 import sk.ban.parser.Parserable;
 import sk.ban.parser.docx.DOCXParser;
 import sk.ban.parser.pdf.MyPDFParser;
 import sk.ban.util.FileUtil;
-import sk.ban.worker.DataCombiner;
 
 import javax.inject.Inject;
 import java.io.File;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.*;
 
 /**
- * Created by USER on 21. 1. 2015.
+ * Created by BAN on 21. 1. 2015.
  */
 public class ParserService {
 
@@ -150,11 +148,10 @@ public class ParserService {
 		try {
 			return future.get();
 		} catch (InterruptedException e) {
-			new ParserException("Execute in Thread problem : " + e);
+			throw new ParserException("Execute in Thread problem : ", e);
 		} catch (ExecutionException e) {
-			new ParserException("Execute in Thread problem : " + e);
+			throw new ParserException("Execute in Thread problem : ", e);
 		}
-		return null;
 	}
 
 	public boolean isRunning() {
@@ -169,14 +166,4 @@ public class ParserService {
 		return parsedData;
 	}
 
-	public List<Document> getParsedDataAsList() {
-		List<Document> resultList = new ArrayList<>();
-		for (Map.Entry<String, List<Document>> entry : parsedData.entrySet()) {
-			Document pdfFile = entry.getValue().get(0);
-			Document docxFile = entry.getValue().get(1);
-
-			resultList.add(DataCombiner.combineData(pdfFile, docxFile));
-		}
-		return resultList;
-	}
 }

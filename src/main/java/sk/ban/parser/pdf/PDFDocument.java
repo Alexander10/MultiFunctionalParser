@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by USER on 31. 1. 2015.
+ * Created by BAN on 31. 1. 2015.
  */
-public class PDFDocument {
+class PDFDocument {
 
 	private List<PDFLine> lines = new ArrayList<>();
 	private int pages;

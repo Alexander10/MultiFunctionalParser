@@ -8,13 +8,11 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Created by USER on 9. 2. 2015.
+ * Created by BAN on 9. 2. 2015.
  */
 @Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface PropertyInfo {
-
-
 
 	String label() default "";
 

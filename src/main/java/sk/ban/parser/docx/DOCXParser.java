@@ -1,15 +1,15 @@
 package sk.ban.parser.docx;
 
-import sk.ban.enums.DocumentPart;
-import sk.ban.exception.ParserException;
-import sk.ban.data.Document;
-import sk.ban.data.DocumentContent;
-import sk.ban.data.DocumentNavigation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
+import sk.ban.data.Document;
+import sk.ban.data.DocumentContent;
+import sk.ban.data.DocumentNavigation;
+import sk.ban.enums.DocumentPart;
+import sk.ban.exception.ParserException;
 import sk.ban.parser.Parserable;
 import sk.ban.util.FileUtil;
 import sk.ban.worker.DataCleaner;
@@ -41,7 +41,7 @@ import java.io.InputStream;
  * <p>
  * <p>
  * <p>
- * Created by USER on 21. 1. 2015.
+ * Created by BAN on 21. 1. 2015.
  */
 public class DOCXParser implements Parserable {
 
@@ -90,12 +90,12 @@ public class DOCXParser implements Parserable {
 						dto.addKeyword(text);
 						break;
 					case SUBTITLE:
-						if(dto.getSubtitle().isEmpty()) {
+						if (dto.getSubtitle().isEmpty()) {
 							dto.setSubtitle(text);
 						}
 						break;
 					case TITLE:
-						if(dto.getTitle().isEmpty()) {
+						if (dto.getTitle().isEmpty()) {
 							dto.setTitle(text);
 						}
 						break;
@@ -172,20 +172,20 @@ public class DOCXParser implements Parserable {
 			DocumentBuilder builder = factory.newDocumentBuilder();
 			doc = builder.parse(in);
 		} catch (ParserConfigurationException e) {
-			log.error("Docx Parser configuration problem Document builder problem: " + e);
+			throw new ParserException("Docx Parser configuration problem - Document builder problem: ", e);
 		} catch (SAXException e) {
-			log.error("DOCX: " + e);
+			throw new ParserException("DOCX: ", e);
 		} catch (IOException e) {
-			log.error("DOCX: " + e);
+			throw new ParserException("DOCX: ", e);
 		} finally {
 			try {
 				in.close();
 			} catch (IOException e) {
-				throw new ParserException("Problem with closing input stream: " + e);
+				throw new ParserException("Problem with closing input stream: ", e);
 			}
 		}
 
-		log.debug("Document was successfully created");
+		log.debug("DOM Document was successfully created");
 
 		return doc;
 	}

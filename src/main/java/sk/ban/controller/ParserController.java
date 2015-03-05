@@ -36,9 +36,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.ResourceBundle;
+import java.util.stream.Collectors;
 
 /**
  * Created by BAN on 20. 1. 2015.
+ * Main GUI functionality is implemented in this class
  */
 @Singleton
 public class ParserController implements Initializable {
@@ -67,12 +69,18 @@ public class ParserController implements Initializable {
 	private Button btnStart;
 
 	@FXML
+	private Button btnValidate;
+
+	@FXML
+	private Button btnSave;
+
+	@FXML
 	private TextArea taOutput;
 
 	@Inject
 	private ParserService service;
 
-	private ObservableList<TableRowDataModel> observableList = FXCollections.observableArrayList();
+	private final ObservableList<TableRowDataModel> observableList = FXCollections.observableArrayList();
 
 	private static final String STOP_PARSING = "Stop parsing";
 
@@ -98,9 +106,6 @@ public class ParserController implements Initializable {
 
 		TableColumn<TableRowDataModel, Boolean> checked = new TableColumn<>("OK");
 		checked.setCellValueFactory(new PropertyValueFactory<>("ok"));
-		CheckBoxTableCell checkCell = new CheckBoxTableCell<>();
-		checkCell.setVisible(true);
-
 		checked.setCellFactory(param -> new CheckBoxTableCell<>());
 
 		tableView.getColumns().addAll(fileName, openPDF, openDOCX, pdfResult, docxResult, finalResult, checked);
@@ -123,40 +128,53 @@ public class ParserController implements Initializable {
 				service.setRunning(false);
 				log.info("Parser was stopped");
 			} else {
-				Platform.runLater(() -> btnStart.setText(STOP_PARSING));
+
+				Platform.runLater(() ->{
+					btnStart.setText(STOP_PARSING);
+					btnSave.setDisable(true);
+					btnValidate.setDisable(true);
+				});
 				service.parseData(file);
-
-				Map<String, List<Document>> data = service.getParsedData();
-
-				for (Map.Entry<String, List<Document>> entry : data.entrySet()) {
-
-					TableRowDataModel tableModel = new TableRowDataModel(entry.getKey());
-					List<Document> dtos = entry.getValue();
-
-					Document pdfFile = dtos.get(0);
-
-					tableModel.setPdfFile(pdfFile.getContentData() != null ? new DocumentDataModel(pdfFile) : null);
-					tableModel.setPdfResult(pdfFile.getContentData() != null ? new DocumentDataModel(pdfFile) : null);
-
-					Document docxFile = dtos.get(1);
-					tableModel.setDocxFile(docxFile.getContentData() != null ? new DocumentDataModel(docxFile) : null);
-					tableModel.setDocxResult(docxFile.getContentData() != null ? new DocumentDataModel(docxFile) : null);
-
-					tableModel.setFinalResult(new DocumentDataModel(DataCombiner.combineData(pdfFile, docxFile)));
-					observableList.add(tableModel);
-
-				}
+				fillParsedDataIntoObservableList();
 			}
 			Platform.runLater(() -> tableView.setItems(observableList));
-			Platform.runLater(() -> btnStart.setText(START_PARSING));
-
-
+			Platform.runLater(() -> {
+				btnStart.setText(START_PARSING);
+				btnSave.setDisable(false);
+				btnValidate.setDisable(false);
+			});
 		}).start();
+	}
+
+	/**
+	 * Method for filling observable list with parsed data
+	 */
+	private void fillParsedDataIntoObservableList(){
+		Map<String, List<Document>> data = service.getParsedData();
+
+		for (Map.Entry<String, List<Document>> entry : data.entrySet()) {
+
+			TableRowDataModel tableModel = new TableRowDataModel(entry.getKey());
+			List<Document> dtos = entry.getValue();
+
+			Document pdfFile = dtos.get(0);
+
+			tableModel.setPdfFile(pdfFile.getContentData() != null ? new DocumentDataModel(pdfFile) : null);
+			tableModel.setPdfResult(pdfFile.getContentData() != null ? new DocumentDataModel(pdfFile) : null);
+
+			Document docxFile = dtos.get(1);
+			tableModel.setDocxFile(docxFile.getContentData() != null ? new DocumentDataModel(docxFile) : null);
+			tableModel.setDocxResult(docxFile.getContentData() != null ? new DocumentDataModel(docxFile) : null);
+
+			tableModel.setFinalResult(new DocumentDataModel(DataCombiner.combineData(pdfFile, docxFile)));
+			observableList.add(tableModel);
+
+		}
 	}
 
 	@FXML
 	public void validateData() {
-		List<Document> resultList = service.getParsedDataAsList();
+		List<Document> resultList = getParsedData();
 
 		for (Document dto : resultList) {
 			Platform.runLater(() -> taOutput.appendText(DataValidator.validate(dto.getContentData(), dto.getContentData().getFileName())));
@@ -173,9 +191,9 @@ public class ParserController implements Initializable {
 			return;
 		}
 
-		List<Document> resultList = service.getParsedDataAsList();
+		List<Document> resultList = getParsedData();
 		new BibExporter(tfConferenceName.getText(), tfYear.getText(), tfPublishedDate.getValue().toString(), tfRegistrationDate.getValue().toString())
-				.exporAllDataToFile(FileUtil.getWorkingDir(tfPath.getText()), resultList);
+				.exportToFile(FileUtil.getWorkingDir(tfPath.getText()), resultList);
 	}
 
 	public void setPath(@Observes @MenuEventDefinition(MenuEventType.OPEN_DIR) MenuEvent event) {
@@ -218,5 +236,8 @@ public class ParserController implements Initializable {
 		return finalResult;
 	}
 
+	private List<Document> getParsedData(){
+		return observableList.stream().map( row -> row.convert().getFinalDocument()).collect(Collectors.toList());
+	}
 
 }

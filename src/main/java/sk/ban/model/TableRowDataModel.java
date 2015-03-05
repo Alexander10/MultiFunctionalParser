@@ -7,11 +7,11 @@ import sk.ban.data.Document;
 import sk.ban.data.TableRow;
 
 /**
- * Created by USER on 18. 1. 2015.
+ * Created by BAN on 18. 1. 2015.
  */
 public class TableRowDataModel {
 
-	private StringProperty fileName = new SimpleStringProperty(new String(""));
+	private StringProperty fileName = new SimpleStringProperty("");
 
 	private DocumentDataModel docxFile;
 	private DocumentDataModel pdfFile;
@@ -43,7 +43,7 @@ public class TableRowDataModel {
 	public TableRow convert() {
 		Document docx = docxFile != null && docxFile.getReferenceDTO() != null ? docxFile.getReferenceDTO() : null;
 		Document pdf = pdfResult != null && pdfResult.getReferenceDTO() != null ? pdfResult.getReferenceDTO() : null;
-		return new TableRow(fileName.getValue(), docx, pdf, finalResult.getReferenceDTO(), ok.getValue());
+		return new TableRow(fileName.getValue(), docx, pdf, finalResult.getDocument(), ok.getValue());
 	}
 
 	public String getFileName() {

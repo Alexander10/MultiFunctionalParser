@@ -9,7 +9,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Created by USER on 16. 2. 2015.
+ * Created by BAN on 16. 2. 2015.
  */
 @Qualifier
 @Target({ElementType.FIELD, ElementType.PARAMETER})

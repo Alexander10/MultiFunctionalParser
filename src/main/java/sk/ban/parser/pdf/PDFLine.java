@@ -8,11 +8,11 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 /**
- * Created by USER on 31. 1. 2015.
+ * Created by BAN on 31. 1. 2015.
  */
-public class PDFLine {
+class PDFLine {
 
-	private String line;
+	private final String line;
 	private List<TextPosition> charPositions = new ArrayList<>();
 	private static final double FOOTER_POSITION = 750;
 
@@ -46,7 +46,7 @@ public class PDFLine {
 	}
 
 	/**
-	 * TODO: this is wrooong ;)
+	 * TODO: this is wrooong idea (please consider better solution, maybe discuss with someone) ;)
 	 *
 	 * @param line
 	 * @return

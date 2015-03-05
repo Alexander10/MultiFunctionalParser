@@ -17,7 +17,7 @@ import java.util.Optional;
 import java.util.ResourceBundle;
 
 /**
- * Created by USER on 14. 2. 2015.
+ * Created by BAN on 14. 2. 2015.
  */
 public class EditModeController extends AnchorPane implements Initializable {
 
@@ -103,14 +103,16 @@ public class EditModeController extends AnchorPane implements Initializable {
 		return textArea;
 	}
 
+	/**
+	 * TODO: There is problem with proper selecting text fields in list view
+	 * @param property
+	 * @return
+	 */
 	private ListView createListView(SimpleListProperty<SimpleStringProperty> property) {
 		ListView listView = new ListView();
 		listView.itemsProperty().bindBidirectional(property);
 		listView.setCellFactory((prop) -> new InstantEditingCell());
 		listView.setEditable(true);
-//		listView.getSelectionModel().selectedItemProperty()
-//				.addListener( -> {
-//				});
 		return listView;
 	}
 
@@ -120,7 +122,6 @@ public class EditModeController extends AnchorPane implements Initializable {
 				.findAny();
 
 	}
-
 
 	public void setDataModel(DocumentDataModel model) {
 		documentDataModel = model;

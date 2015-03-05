@@ -11,10 +11,11 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 /**
- * Created by USER on 2. 2. 2015.
+ * Created by BAN on 2. 2. 2015.
  */
 public class BibExporter {
 
@@ -28,6 +29,8 @@ public class BibExporter {
 	private static String publishedDate;
 	private static String registrationDate;
 
+	private String exportedFile ;
+
 	public BibExporter(String conference, String date, String publishedDate, String registrationDate) {
 		this.conference = conference;
 		this.year = date;
@@ -38,15 +41,16 @@ public class BibExporter {
 	 * @param dir
 	 * @param parsedDocuments
 	 */
-	public void exporAllDataToFile(File dir, List<Document> parsedDocuments) {
+	public void exportToFile(File dir, List<Document> parsedDocuments) {
 
-		File bibFile = new File(dir.toString() + "\\" + year + "-" + conference + "-1-1.bib");
+		exportedFile = dir.toString() + "\\" + year + "-" + conference + "-1-1.bib";
+		File bibFile = new File(exportedFile);
 
 		try (BufferedWriter writer = new BufferedWriter(new FileWriter(bibFile))) {
 
 			StringBuilder builder = new StringBuilder();
 			for(Document dto : parsedDocuments) {
-				builder.append(exportDataToString(dto));
+				builder.append(exportToString(dto));
 			}
 			writer.write(builder.toString());
 		} catch (IOException ex) {
@@ -60,7 +64,7 @@ public class BibExporter {
 	 * @param dto
 	 * @return
 	 */
-	public static String exportDataToString(Document dto) {
+	public static String exportToString(Document dto) {
 
 		if(dto == null){
 			log.info("Export data to bib: dto is null ");
@@ -74,44 +78,48 @@ public class BibExporter {
 
 		builder.append("@inproceedings{");
 		String key = contentDTO.getFileName().substring(contentDTO.getFileName().lastIndexOf("\\") + 1, contentDTO.getFileName().lastIndexOf("."));
-		builder.append(key + ",\r\n");
+		builder.append(key).append(",\r\n");
 		builder.append("author      = {");
 		StringBuilder authors = new StringBuilder(contentDTO.getAuthors().stream().collect(Collectors.joining(";")));
 
 		authors.append("},\r\n");
 		builder.append(authors.toString());
 
-		builder.append("title       = {" + contentDTO.getTitle() + END_OF_LINE);
-		builder.append("subtitle    = {" + ((contentDTO.getSubtitle() == null) ? "" : contentDTO.getSubtitle()) + END_OF_LINE);
+		builder.append("title       = {").append(contentDTO.getTitle()).append(END_OF_LINE);
+		builder.append("subtitle    = {").append((contentDTO.getSubtitle() == null) ? "" : contentDTO.getSubtitle()).append(END_OF_LINE);
 		builder.append("email    = {@" + END_OF_LINE);
-		builder.append("year        = {" + year + END_OF_LINE);
-		builder.append("journal     = {" + conference + END_OF_LINE);
-		builder.append("chapter     = {" + ((navigationDto != null) ? navigationDto.getSection() : "") + END_OF_LINE);
-		builder.append("pages       = {" + ((navigationDto != null) ? navigationDto.getStartPage() : orderNumber) +
-				"--" + ((navigationDto != null) ? navigationDto.getLastPage() : orderNumber) + END_OF_LINE);
-		builder.append("file        = {" + key + ".pdf" + END_OF_LINE);
+		builder.append("year        = {").append(year).append(END_OF_LINE);
+		builder.append("journal     = {").append(conference).append(END_OF_LINE);
+		builder.append("chapter     = {").append((navigationDto != null) ? navigationDto.getSection() : "").append(END_OF_LINE);
+		builder.append("pages       = {").append((navigationDto != null) ? navigationDto.getStartPage() : orderNumber)
+				.append("--").append((navigationDto != null) ? navigationDto.getLastPage() : orderNumber).append(END_OF_LINE);
+		builder.append("file        = {").append(key).append(".pdf").append(END_OF_LINE);
 		builder.append("visibility  = {private" + END_OF_LINE);
-		builder.append("registered  = {" + registrationDate + END_OF_LINE);
-		builder.append("published   = {" + publishedDate + END_OF_LINE);
-		builder.append("abstract    = {" + ((contentDTO.getAbstractText() != null) ? contentDTO.getAbstractText() : "") + END_OF_LINE);
+		builder.append("registered  = {").append(registrationDate).append(END_OF_LINE);
+		builder.append("published   = {").append(publishedDate).append(END_OF_LINE);
+		builder.append("abstract    = {").append((contentDTO.getAbstractText() != null) ? contentDTO.getAbstractText() : "").append(END_OF_LINE);
 
 		String keywordsInString = contentDTO.getKeywords().stream().collect(Collectors.joining(SEPARATOR));
 
-		builder.append("keywords     = {" + keywordsInString + END_OF_LINE);
+		builder.append("keywords     = {").append(keywordsInString).append(END_OF_LINE);
 
 		int index = 1;
 		StringBuilder referencesBuilder = new StringBuilder();
 		for (String reference : contentDTO.getReferences()) {
 
-			referencesBuilder.append(index + " " + reference + SEPARATOR);
+			referencesBuilder.append(index).append(" ").append(reference).append(SEPARATOR);
 			index++;
 		}
-		builder.append("references   ={" + referencesBuilder.toString() + END_OF_LINE);
+		builder.append("references   ={").append(referencesBuilder.toString()).append(END_OF_LINE);
 
 		builder.append("}\r\n\r\n");
 		orderNumber++;
 
 		log.debug("Data exported to String");
 		return builder.toString();
+	}
+
+	public  Optional<String> getPathToExportedFile(){
+		return Optional.ofNullable(exportedFile);
 	}
 }

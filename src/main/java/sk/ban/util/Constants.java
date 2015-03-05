@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * Created by USER on 31. 1. 2015.
+ * Created by BAN on 31. 1. 2015.
  */
 public  class Constants {
 	public static final List<String> REFERENCES = Arrays.asList("References", "Reference", "REFERENCE", "EFERENCES");

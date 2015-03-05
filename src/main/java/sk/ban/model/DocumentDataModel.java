@@ -12,7 +12,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Created by USER on 14. 2. 2015.
+ * Created by BAN on 14. 2. 2015.
  */
 public class DocumentDataModel {
 
@@ -59,21 +59,22 @@ public class DocumentDataModel {
 				.forEach(item -> observable.add(new SimpleStringProperty(item)));
 	}
 
-	public Document getFilledDocumentDTO() {
-		DocumentContent contentDTO = new DocumentContent();
-		contentDTO.setTitle(title.getValue());
-		contentDTO.setSubtitle(subTitle.getValue());
-		contentDTO.setAbstractText(abstractText.getValue());
-		fillListData(contentDTO.getAuthors(), authors);
-		fillListData(contentDTO.getKeywords(), keywords);
-		fillListData(contentDTO.getReferences(), references);
+	public Document getDocument() {
+		DocumentContent content = new DocumentContent();
+		content.setFileName(referenceDTO.getContentData().getFileName());
+		content.setTitle(title.getValue());
+		content.setSubtitle(subTitle.getValue());
+		content.setAbstractText(abstractText.getValue());
+		fillListData(content.getAuthors(), authors);
+		fillListData(content.getKeywords(), keywords);
+		fillListData(content.getReferences(), references);
 
-		DocumentNavigation navigationDTO = new DocumentNavigation();
-		navigationDTO.setSection(section.getValue());
-		navigationDTO.setStartPage(startPage.getValue());
-		navigationDTO.setLastPage(lastPage.getValue());
+		DocumentNavigation navigation = new DocumentNavigation();
+		navigation.setSection(section.getValue());
+		navigation.setStartPage(startPage.getValue());
+		navigation.setLastPage(lastPage.getValue());
 
-		return new Document(navigationDTO, contentDTO);
+		return new Document(navigation, content);
 	}
 
 	public void copyData(DocumentDataModel model) {
@@ -91,7 +92,7 @@ public class DocumentDataModel {
 	}
 
 	/**
-	 * copying of SimpleList is not possible directly by Collections.copy due to problem with list size
+	 * Copying of SimpleList is not possible directly by Collections.copy due to problem with list size
 	 * first is needed to create list with properly size
 	 *
 	 * @param src
@@ -189,7 +190,7 @@ public class DocumentDataModel {
 
 	@Override
 	public String toString() {
-		return BibExporter.exportDataToString(referenceDTO);
+		return BibExporter.exportToString(referenceDTO);
 	}
 
 

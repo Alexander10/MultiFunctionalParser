@@ -4,7 +4,7 @@ import sk.ban.data.Document;
 import sk.ban.data.DocumentContent;
 
 /**
- * Created by USER on 5. 2. 2015.
+ * Created by BAN on 5. 2. 2015.
  */
 public class DataCombiner {
 

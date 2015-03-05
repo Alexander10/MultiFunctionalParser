@@ -9,9 +9,9 @@ import java.io.IOException;
 import java.util.List;
 
 /**
- * Created by USER on 30. 1. 2015.
+ * Created by BAN on 30. 1. 2015.
  */
-public class MyPDFTextStripper extends PDFTextStripper {
+class MyPDFTextStripper extends PDFTextStripper {
 
 	private static final Logger log = LoggerFactory.getLogger(MyPDFTextStripper.class);
 
@@ -22,7 +22,12 @@ public class MyPDFTextStripper extends PDFTextStripper {
 		this.documentContainer = document;
 	}
 
-
+	/**
+	 * We are overriding this method because PDFBox library doesn't provide informations about text format (font, position....)
+ 	 * @param text
+	 * @param textPositions
+	 * @throws IOException
+	 */
 	protected void writeString(String text, List<TextPosition> textPositions) throws IOException {
 		documentContainer.addLine(new PDFLine(text, textPositions));
 	}

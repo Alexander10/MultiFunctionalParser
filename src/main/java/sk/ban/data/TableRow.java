@@ -3,7 +3,7 @@ package sk.ban.data;
 import java.io.Serializable;
 
 /**
- * Created by USER on 16. 2. 2015.
+ * Created by BAN on 16. 2. 2015.
  */
 public class TableRow implements Serializable {
 

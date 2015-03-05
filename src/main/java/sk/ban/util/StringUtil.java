@@ -7,33 +7,35 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * Created by USER on 28. 1. 2015.
+ * Created by BAN on 28. 1. 2015.
  */
 public class StringUtil {
 
 	/**
+	 * Method split data by semicolons or by commas
+	 *
 	 * @param data
 	 * @return
 	 */
-	public static String[] parseDataByDelimiter(String data) {
-		//String is immutable
+	public static String[] splitData(String data) {
 		data = data.replaceAll(";", ",");
 
 		//we suppose that, when string contains delimiter it will split data to array
 		if (data.contains(",")) {
-			return data.split(",");
+			return Arrays.stream(data.split(",")).filter(str -> !str.isEmpty()).toArray(String[]::new);
 		}
 
-		return new String[]{data};
+		return Arrays.stream(new String[]{data}).filter(str -> !str.isEmpty()).toArray(String[]::new);
 	}
+
 	/**
 	 * Remove none alphabetic characters from string
-	 * look on first 5 characters and remove all none alphabetic characters
+	 * look from left on first 5 characters and remove from left all none alphabetic characters
 	 *
 	 * @param text
 	 * @return
 	 */
-	public static String removeNoneAlphabeticCharcters(String text) {
+	public static String removeStartNoneAlphanumericString(String text) {
 		Pattern pattern = Pattern.compile("[^a-zA-Z0-9]{0,5}");
 		Matcher matcher = pattern.matcher(text);
 		while (matcher.find()) {
@@ -44,11 +46,12 @@ public class StringUtil {
 
 	/**
 	 * From string remove all none digits characters. After calling this method string could contain only digits
+	 *
 	 * @param text
 	 * @return
 	 */
-	public static String removeNoneDigitCharacters(String text){
-		return text.replaceAll("[^\\d.]","");
+	public static String removeNoneDigitCharacters(String text) {
+		return text.replaceAll("[^\\d.]", "");
 	}
 
 	/**
@@ -56,7 +59,7 @@ public class StringUtil {
 	 * this word is removed and method return text without this removed word
 	 *
 	 * @param values - useless words
-	 * @param text -
+	 * @param text   -
 	 * @return
 	 */
 	public static String removeFirstUselessWord(List<String> values, String text) {
@@ -67,17 +70,39 @@ public class StringUtil {
 		return text;
 	}
 
-	public static String removeFirstUselessWord(String value, String text){
-		return text.replace(value,"");
-	}
-
-	private static final Optional<String> getMatchedText(List<String> values, String text) {
+	private static Optional<String> getMatchedText(List<String> values, String text) {
 		return values.stream()
-				.filter(name -> text.toLowerCase().contains(name.toLowerCase())).findFirst();
+				.filter(name -> text.toLowerCase().contains(name.toLowerCase()))
+				.findFirst();
 	}
 
-	public static final boolean containsBoundedDigit(String text){
+	/**
+	 * Check whether input string contains string which match to following predicate - digits -
+	 *
+	 * @param text
+	 * @return
+	 */
+	public static boolean containsBoundedDigit(String text) {
 		return text.trim().matches("[-]\\s+\\d+\\s+[-]");
+	}
+
+	/**
+	 * Count number of occurences of subtring in string
+	 *
+	 * @param string
+	 * @param substring
+	 * @return
+	 */
+	public static int countMatches(String string, String substring) {
+
+		Pattern p = Pattern.compile(substring);
+		Matcher m = p.matcher(string);
+		int count = 0;
+		while (m.find()) {
+			count += 1;
+		}
+
+		return count;
 	}
 
 }

@@ -19,7 +19,7 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 
 /**
- * Created by USER on 26. 1. 2015.
+ * Created by BAN on 26. 1. 2015.
  */
 public class FileUtil {
 
@@ -27,7 +27,7 @@ public class FileUtil {
 	private static final Logger log = LoggerFactory.getLogger(FileUtil.class);
 
 	/**
-	 * method retrieves all files in current directory
+	 * Method find all files in current directory by file extensions
 	 *
 	 * @param dir
 	 * @return
@@ -50,7 +50,7 @@ public class FileUtil {
 	private static boolean matchAny(Path path, FileExtension[] exts) {
 		return Arrays.stream(exts)
 				.filter(ext -> ext.getName().equalsIgnoreCase(getFileExtension(path.toFile())))
-				.count() == 0 ? false : true;
+				.count() != 0;
 	}
 
 	/**
@@ -66,21 +66,18 @@ public class FileUtil {
 	}
 
 	/**
-	 * find out whether file exists
-	 * @param name
+	 * Check whether file exists
+	 * @param path - to file
 	 * @return
 	 */
-	public static boolean existsFile(String name){
-		File file = new File(name);
-		if(file.exists()){
-			return true;
-		}
-		return false;
+	public static boolean existsFile(String path){
+		File file = new File(path);
+		return file.exists();
 	}
 	/**
-	 * return current working directory, if path is file return dir if path is dir return current dir
+	 *
 	 * @param path
-	 * @return
+	 * @return current working directory, if path is file return dir if path is dir return current dir
 	 */
 	public static File getWorkingDir(String path){
 
@@ -95,16 +92,6 @@ public class FileUtil {
 		return file.getParentFile();
 	}
 
-	public static String getFileNameWithoutExt(File file) {
-		return getFileNameWithoutExt(file.getName());
-	}
-
-	public static String getFileNameWithoutExt(String fileName) {
-		if (fileName == null || fileName.isEmpty()) {
-			throw new IllegalArgumentException("File:" + fileName);
-		}
-		return fileName.substring(0, fileName.lastIndexOf("."));
-	}
 
 	public static void openFile(String filePath) {
 		if (filePath == null || filePath.isEmpty()) {
@@ -134,8 +121,8 @@ public class FileUtil {
 	public static Optional<InputStream> openDocx(File file) {
 
 		Optional<InputStream> in;
-		if (file.exists()) {
-			System.out.println("exists");
+		if (!file.exists()) {
+			return Optional.empty();
 		}
 
 		try {
@@ -145,11 +132,11 @@ public class FileUtil {
 			in = Optional.of(zip.getInputStream(entry));
 
 		} catch (NullPointerException e) {
-			throw new ParserException("Xml file document.xml in word directory doesn't exist: " + e);
+			throw new ParserException("Xml file document.xml in word directory doesn't exist: ", e);
 		} catch (FileNotFoundException e) {
 			throw new ParserException("Docx file could not be find: " + file.getName());
 		} catch (IOException e) {
-			throw new ParserException("Problem with Docx file by unziping: " + e);
+			throw new ParserException("Problem with Docx file by unziping: ", e);
 		}
 
 		return in;

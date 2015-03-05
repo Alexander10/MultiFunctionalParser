@@ -1,11 +1,9 @@
 package sk.ban.worker;
 
 import sk.ban.data.SerializationObject;
-import sk.ban.data.TableRow;
 import sk.ban.exception.ParserException;
 
 import java.io.*;
-import java.util.List;
 
 /**
  * Created by BAN on 15. 2. 2015.
@@ -17,7 +15,7 @@ public class DataSerializer {
 		try (
 				OutputStream outputStream = new FileOutputStream(file);
 				OutputStream buffer = new BufferedOutputStream(outputStream);
-				ObjectOutput output = new ObjectOutputStream(buffer);
+				ObjectOutput output = new ObjectOutputStream(buffer)
 		) {
 			output.writeObject(obj);
 		} catch (IOException ex) {
@@ -30,7 +28,7 @@ public class DataSerializer {
 		try (
 				InputStream inputStream = new FileInputStream(file);
 				InputStream buffer = new BufferedInputStream(inputStream);
-				ObjectInput input = new ObjectInputStream(buffer);
+				ObjectInput input = new ObjectInputStream(buffer)
 		) {
 			//deserialize the List
 			return (SerializationObject) input.readObject();

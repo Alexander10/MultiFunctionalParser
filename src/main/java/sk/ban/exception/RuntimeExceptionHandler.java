@@ -5,7 +5,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Created by USER on 24. 1. 2015.
+ * Created by BAN on 24. 1. 2015.
  */
 public class RuntimeExceptionHandler implements Thread.UncaughtExceptionHandler {
 

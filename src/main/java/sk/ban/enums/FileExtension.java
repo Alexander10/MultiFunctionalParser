@@ -1,11 +1,12 @@
 package sk.ban.enums;
 
 /**
- * Created by USER on 7. 2. 2015.
+ * Created by BAN on 7. 2. 2015.
  */
 public enum FileExtension {
+
 	PDF("pdf"), DOCX("docx");
-	private String name;
+	private final String name;
 
 	FileExtension(String name) {
 		this.name = name;

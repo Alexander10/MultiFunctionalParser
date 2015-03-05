@@ -20,7 +20,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 /**
- * Created by USER on 20. 1. 2015.
+ * Created by BAN on 20. 1. 2015.
  */
 public class ConsoleController implements Initializable {
 
@@ -31,7 +31,7 @@ public class ConsoleController implements Initializable {
 	@FXML
 	private TextArea console;
 
-	private ConsoleAppenderWriter writer = new ConsoleAppenderWriter();
+	private final ConsoleAppenderWriter writer = new ConsoleAppenderWriter();
 
 	/**
 	 * Caution, {@link WriterAppender} is Log4j specific.
@@ -69,14 +69,14 @@ public class ConsoleController implements Initializable {
 		/**
 		 * Logger is probably not threadsafe, so using at least some kind of synchronisation
 		 */
-		private StringBuffer buffer = new StringBuffer();
+		private final StringBuffer buffer = new StringBuffer();
 
-		private Timer timer = new Timer();
+		private final Timer timer = new Timer();
 
 		/**
 		 * Reduce number of GC by having only 1 instance of {@link Runnable} during {@link #flushTimerTask}
 		 */
-		private Runnable flushAction = () -> {
+		private final Runnable flushAction = () -> {
 
 			String message = buffer.toString();
 			buffer.setLength(0);
@@ -99,7 +99,7 @@ public class ConsoleController implements Initializable {
 		/**
 		 * We need to store {@link TimerTask} instance, so we can gracefully shutdown the {@link #timer} oject.
 		 */
-		private TimerTask flushTimerTask = new TimerTask() {
+		private final TimerTask flushTimerTask = new TimerTask() {
 			@Override
 			public void run() {
 				if (buffer.length() > 0) {
